@@ -1,0 +1,26 @@
+{% extends 'cust.html' %}
+
+{% block title %} Melbourne Cryto User {{ super() }}{% endblock %}
+
+{% block navbar %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container confirm">
+
+    <div class="alert alert-success mt-5 text-center" role="alert">
+        <strong>Congratulations !</strong> Your email have successfully send to user !
+    </div>
+
+    </div>
+{% block footer %}
+    {{ super() }}
+{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

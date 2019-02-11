@@ -1,0 +1,29 @@
+{% extends 'cust.html' %}
+
+{% block title %} Melbourne Cryto User {{ super() }}{% endblock %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="pcont p-3 mb-4 bg-info text-white text-center">
+        Melbourne Bitcoin Community User Visualization
+    </div>
+    <!--original google data studio has remove-->
+    <iframe class="graph" width="1100" height="675" src="https://datastudio.google.com/" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

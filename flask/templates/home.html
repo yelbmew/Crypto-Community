@@ -1,0 +1,72 @@
+{% extends 'cust.html' %}
+
+{% block title %} Melbourne Crypto User {{ super() }}{% endblock %}
+
+{% block navbar %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+     <div class=" jumbo jumbotron text-white text-center">
+       <h1>Melbourne Bitcoin Community </h1> 
+       <p></p> 
+     </div>
+    	<br/>
+        <div class ="bitcoinValue">
+            <table class="table table-striped table-dark">
+              <thead>
+                <tr class="bg-info">
+                  <th scope="col">Currency</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Buy</th>
+                  <th scope="col">Sell</th>
+                </tr>
+              </thead>
+              <tbody>
+        {% for value in bit %}
+                <tr>
+                  <th = "row">{{bit[value].symbol}} : {{ value }}</th>
+                  <td>{{ bit[value].last }}</td>
+                  <td>{{ bit[value].buy }}</td>
+                  <td>{{ bit[value].sell }}</td>
+                </tr>
+              </tbody>
+        {% endfor %}
+            </table>
+        </div>
+        <div class="p-3 mb-2 mt-3 bg-info text-white text-center">
+            Bitcoin Meetup Point Locator
+        </div>
+    	<div class="googleSearch row justify-content-center">
+    		<div class="col-12 col-md-10 col-lg-8">
+    			<div class="card-body row no-gutters align-items-center">
+    				<div class="col-auto">
+    					<i class="fas fa-search h4 text-body"></i>
+    				</div>
+    				<div class="searchBar col">
+    					<input id="pac-input" class="form-control form-control-lg form-control-borderless"
+    					name="locationSearch" type="text" placeholder="Search nearest Bitcoin meetup point by postal code e.g 3000">
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div id="googleMaps">
+    </div>
+
+    <script
+        async defer src="insert google maps api key here ">
+    </script>
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

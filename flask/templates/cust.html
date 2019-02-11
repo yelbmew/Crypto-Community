@@ -1,0 +1,47 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+<title>{% block title %}{% endblock %} - Melbourne Crypto </title>
+
+{% block navbar %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styling.css') }}"/>
+    <script src="{{url_for('static', filename='myjs.js')}}"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="home">
+          <img src="https://en.bitcoin.it/w/images/en/c/c4/BC_Logotype_Reverse.png" width="200px" height="40px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                 <a class="nav-link" href="home">HOME</a>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" href="home">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+{% endblock %}
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+{% block footer %}
+    <div class="footdown bg-dark navbar-fixed-bottom">
+    <div class="p-3 mb-2 bg-warning text-dark">DEVELOPER DETAILS</div>
+        <div class="col-sm-12 innerfoot">
+            <p>Wembley</br> wembley@student.edu.au</p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+</body>
+

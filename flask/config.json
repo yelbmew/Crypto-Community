@@ -1,0 +1,8 @@
+{
+  "DEFAULT": {
+    "USER": "user",
+    "PASS": "give-a-secure-password",
+    "HOST": "35.2xx.xx.xx",
+    "DBNAME": "name-your-db-nice"
+  }
+}

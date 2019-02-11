@@ -1,0 +1,60 @@
+{% extends 'cust.html' %}
+
+{% block title %} Melbourne Cryto User {{ super() }}{% endblock %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="col-lg-6 offset-md-3 mt-5">
+<table class="table table-striped .table-bordered  table-dark">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col">First Name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Bitcoin Address</th>
+          </tr>
+        </thead>
+        <tbody>
+         {% for user in allusers %}
+          <tr>
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.bitaddr }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+</table>
+
+
+
+     <div class="container mt-4 mb-5">
+     <div class="pcont p-3 mb-4 bg-success text-white text-center">Contact Active Users</div>
+     <form  action="{{ url_for ('admin_contact') }}" method="post">
+         <label for="Email">Email</label>
+           <input type="text" required class="form-control" id="toemail" name="toemail" placeholder="Enter Email">
+         <br>
+         <label for="subject">Subject Header:</label>
+           <input type="text" required class="form-control" id="subject" name="subject" placeholder="Enter Subject Header">
+         <br>
+         <label for="subject">Message:</label>
+          <textarea type="text" required class="form-control" name="message" id="message" rows="10"></textarea>
+         <br>
+             <button type="submit" class="btn btn-success">Send News</button>
+    </form>
+    </div>
+    </div>
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

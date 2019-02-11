@@ -1,0 +1,26 @@
+{% extends 'cust.html' %}
+
+{% block title %} Melbourne Cryto User {{ super() }}{% endblock %}
+
+{% block navbar %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container confirm">
+
+    <div class="alert alert-success mt-5 text-center" role="alert">
+        <strong>Congratulations !</strong> You have successfully subscribed to our latest news list
+    </div>
+
+    </div>
+{% block footer %}
+    {{ super() }}
+{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}
