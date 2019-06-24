@@ -21,7 +21,7 @@ ___
 
    | Resources                                           | Descriptions                       |
    | --------------------------------------------------- | ---------------------------------- |
-   | Cloudwatch                                          | Logs monitoring from EC2 Instnaces |
+   | Cloudwatch                                          | Logs monitoring from EC2 Instances |
    | Cloudformation                                      | Launch AWS resources               |
    | EC2 Micro with Ubuntu                               | Host Flask web application         |
    | EC2 Medium with Red Hat Enterprise Linux            | Host Puppet Master                 |
@@ -41,7 +41,7 @@ ___
 
 ## Project Overview
 The idea behind this application is to bring anyone in Melbourne who hold  
-a strong passion in Bitcoin. The inspiration was came from [MeetUp](https://www.meetup.com).<br />
+a strong passion in Bitcoin and the inspiration was came from [MeetUp](https://www.meetup.com).<br />
 Some of the main features from the apps are:<br />  
 
 Homepage will present the user latest exchange rate of Bitcoin in different currency utilizing Blockchain API. <br />
@@ -69,16 +69,20 @@ which pip3
 If both command return a valid path means you are good to go. If not, please follow one of the 
 instruction below depend on your platform.
 
-#### Linux Distribution
+#### For Linux Distribution
 #### Arch
 ```bash
 sudo pacman -S python36 python-pip
+```
+#### Fedora
+```bash
+sudo dnf install python36 
 ```
 #### Ubuntu
 ```bash
 sudo apt-get -y install python3 python3-pip
 ```
-#### MAC OS
+#### For MAC OS
 Homebrew is a great package manager that don’t comes with Mac OS. Install Homebrew with
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -149,7 +153,7 @@ aws ec2 describe-key-pairs
 #### Retrieve Subnets and VPC Id
 We are going to need VPCId and SubnetId when we launch our Cloudformation stack
 ```bash
-aws ec2 describe-subnets | grep -iE 'subnetid|vpcid' -m2
+aws ec2 describe-subnets | grep -iEm2 'subnetid|vpcid'
 ```
 #### Launch AWS Cloudformation stack
 ```bash
