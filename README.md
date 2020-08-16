@@ -217,9 +217,9 @@ will be able to see the logs that get stream from the instance.
 #### Puppet on t2 Medium RHEL Instance
 I decided to take this approach by including configuration management tools just to mirror the real
 world. Think of a scenario where you have 100 of servers to manage, by ssh into each one
-and install the packages would be a really by idea.
+and install the packages would be a really bad idea.
 
-Launch the Cloudformation cpMaster.json stack and ssh into the instnace using
+Launch the Cloudformation cpMaster.json stack and ssh into the instance using
 the steps above.
 
 Download Puppet Enterprise from 
@@ -264,7 +264,7 @@ touch cpa2-module.pp
 _There is a shorthand version of describing the package but for the assignment purpose I will
 describe each step explicitly_  
 
-Add more package base on you needs
+Add more package base on your needs
 ```
 class cpa2_python {
 
